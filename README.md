@@ -1,4 +1,4 @@
-# InterviewPrep[https://interviewprep14.netlify.app/] 🚀
+# [InterviewPrep 🚀](https://interviewprep14.netlify.app/)
 
 Welcome to InterviewPrep, your coding platform for DSA (Data Structures and Algorithms) learning! Get ready to grind now and shine later with our comprehensive resources and tools.
 
@@ -31,12 +31,16 @@ InterviewPrep is dedicated to helping you ace your technical interviews by maste
 3. Start coding and learning!
 
 ## Feedback and Support
-I value your feedback! If you have any suggestions, encounter any issues, or need assistance, don't hesitate to [connect with me](mailto:your_email@example.com) for any queries or feedback.
+I value your feedback! If you have any suggestions, encounter any issues, or need assistance, don't hesitate to [connect with me](mailto:hardik.sharma645@gmail.com) for any queries or feedback.
 
 ## Web Scraper Using Python BeautifulSoup:
 In addition to the web application, I've also developed a web scraper using Python and BeautifulSoup. This scraper is capable of extracting data from web pages, facilitating tasks such as gathering information for analysis, research, or any other purpose.
 
 ## Let's Connect
 Feel free to reach out and connect with me!
+
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png" alt="LinkedIn" width="30">](https://www.linkedin.com/in/athera)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" width="30">](mailto:hardik.sharma645@gmail.com)
+[<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30">](https://github.com/Hardik645)
 
 Happy coding! 💻✨
