@@ -26,10 +26,12 @@ export type Problem = {
 	answer:string;
 	code:string;
 	videoId?:string;
+	likes:number;
+	dislikes:number;
 };
 
 export type DBProblem = {
-	id: string;
+	id: number;
 	title: string;
 	titleSlug:string;
 	difficulty:string;

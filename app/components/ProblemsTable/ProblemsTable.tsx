@@ -9,6 +9,7 @@ import { collection, doc, getDoc, getDocs, orderBy, query, setDoc } from "fireba
 import { useAuthState } from "react-firebase-hooks/auth";
 import { DBProblem } from "@/app/utils/types/problem";
 import { auth, firestore } from "@/app/firebase/firebase";
+import { Problem, problemsDB } from "@/app/mockProblems/problems2";
 
 type ProblemsTableProps = {
 	setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,6 +21,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 		videoId: "",
 	});
 	const problems = useGetProblems(setLoadingProblems);
+	// console.log(JSON.stringify(problems))
 	const solvedProblems = useGetSolvedProblems();
 	const closeModal = () => {
 		setYoutubePlayer({ isOpen: false, videoId: "" });
@@ -47,7 +49,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 					return (
 						<tr className={`${idx % 2 == 1 ? "bg-dark-layer-1" : ""}`} key={problem.id}>
 							<th className='px-2 py-4 font-medium whitespace-nowrap text-dark-green-s flex justify-center'>
-								{solvedProblems.includes(problem.id) && <BsCheckCircle fontSize={"24"} width='18' />}
+								{solvedProblems.includes(problem.id.toString()) && <BsCheckCircle fontSize={"24"} width='18' />}
 							</th>
 							<td className='px-6 py-4'>
 								<Link
@@ -118,15 +120,15 @@ function useGetProblems(setLoadingProblems: React.Dispatch<React.SetStateAction<
 
 	useEffect(() => {
 		const getProblems = async () => {
-			// fetching data logic
 			setLoadingProblems(true);
-			const q = query(collection(firestore, "problems"), orderBy("id", "asc"));
-			const querySnapshot = await getDocs(q);
-			const tmp: DBProblem[] = [];
-			querySnapshot.forEach((doc) => {
-				tmp.push({ id: doc.id, ...doc.data() } as DBProblem);
-			});
-			setProblems(tmp);
+			// const q = query(collection(firestore, "problems"), orderBy("id", "asc"));
+			// const querySnapshot = await getDocs(q);
+			// const tmp: DBProblem[] = [];
+			// querySnapshot.forEach((doc) => {
+			// 	tmp.push({ id: doc.id, ...doc.data() } as DBProblem);
+			// });
+			// setProblems(tmp);
+			setProblems(problemsDB)
 			setLoadingProblems(false);
 		};
 

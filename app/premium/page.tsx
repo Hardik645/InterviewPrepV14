@@ -20,7 +20,7 @@ function index() {
         {
             title:"Pro🚀",
             titleDescription:"Comprehensive package for serious learners preparing for interviews.",
-            prices:[550,450],
+            prices:[450,350],
             details:["All Basic Plan Features",
                     "Job Bootcamp Courses",
                     "Upskilling Courses",
@@ -32,7 +32,7 @@ function index() {
         {
             title:"FAANG🏆",
             titleDescription:"Advanced tier for ambitious users aiming for top-tier tech companies.",
-            prices:[650,550],
+            prices:[550,450],
             details:["All Pro Plan Features",
                     "Interview Experiences",
                     "Interview Guide Bundle",

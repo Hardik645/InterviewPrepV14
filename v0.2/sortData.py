@@ -17,9 +17,17 @@ for i in range(0,len(data)):
     data[i]["dislikes"]=0
 
 data=sorted(data, key=lambda k: k['id'])
-for i in data:
-    print(i["id"])
+seen_ids = set()
+unique_data = []
+for obj in data:
+    if obj["id"] not in seen_ids:
+        unique_data.append(obj)
+        seen_ids.add(obj["id"])
+data=unique_data
+print(len(data))
+# for i in data:
+#     print(i["id"])
 
-with open("app/mockProblems/problems3.ts", "a", encoding="utf-8") as f:
-    f.write(json.dumps(data))
-    f.write(",\n")
+# with open("app/mockProblems/problems3.ts", "a", encoding="utf-8") as f:
+#     f.write(json.dumps(data))
+#     f.write(",\n")
