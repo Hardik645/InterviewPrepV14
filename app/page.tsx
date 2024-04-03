@@ -6,6 +6,7 @@ import ProblemsTable from "./components/ProblemsTable/ProblemsTable";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import { DifficultyDropDown } from "./components/SearchBar/DifficultyDropDown";
 import { CategorySelect } from "./components/SearchBar/CategorySelect";
+import Carousel from "./components/Carousel.tsx/Carousel";
 
 export default function Home() {
   const [loadingProblems, setLoadingProblems] = useState(true);
@@ -21,6 +22,13 @@ export default function Home() {
     <>
       <main className="bg-dark-layer-2 min-h-screen">
         <Topbar />
+        <Carousel
+          images={[
+            { imgSrc: "/hero-1.jpg", toHref: "/arena" },
+            { imgSrc: "/hero-2.jpg", toHref: "/premium" },
+            { imgSrc: "/hero-3.jpg", toHref: "https://discord.gg/eTAK3KUZBU" },
+          ]}
+        />
         <h1
           className="text-2xl text-center text-gray-700 dark:text-gray-300 font-medium
 				uppercase mt-10 mb-5"
